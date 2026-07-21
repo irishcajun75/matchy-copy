@@ -13,7 +13,19 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// Function declaration for search
+function search(animalsArray, nameString) {
+    // Loop through each animal object in the animalsArray
+    for (var i = 0; i < animalsArray.length; i++) {
+        // check if the current animal's name matches the nameString
+        if (animalsArray[i].name.toLowerCase() === nameString.toLowerCase()) {
+            return animalsArray[i]; // return the animal object if found
+        }
+    }
 
+    // if the loop finishes and no match was found, return null
+    return null;
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
